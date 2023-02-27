@@ -63,3 +63,38 @@ class BinaryTree:
         print(f"Target value of {target} not found")
         return False
 
+
+
+    def grab_next_nodes_data(self, node):
+        result = []
+        if node.left is not None:
+            result.append(node.left.data)
+        if node.right is not None:
+            result.append(node.right.data)
+        return result
+
+    def in_order_traversal(self):
+        result = []
+        #check for empty
+        if self.head is None:
+            print("nothing to traverse")
+            return
+        
+        #traverse
+        current_node = self.head
+        while current_node.left is not None and current_node.right is not None:
+            result.append(self.grab_next_nodes_data(current_node))
+            current_node = current_node.left
+        
+        return result
+            
+#right now returns two lists of two, [14, 35] and [10, 19] then stops
+
+        
+
+
+
+"""Create an in-order tree traversal algorithm for your binary search tree
+Research and exploration exercise
+Create a pre-order or a post-order tree traversal algorithm for your binary search tree
+"""
