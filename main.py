@@ -21,8 +21,11 @@ my_tree.insert_node(19)
 my_tree.insert_node(31)
 my_tree.insert_node(42)
 
-print("\n\nNow trying search function: \n")
+
 my_tree.search_for_node(32)
 
-
 print(my_tree.in_order_traversal())
+
+my_tree.pre_order_traversal()
+
+my_tree.post_order_traversal()
